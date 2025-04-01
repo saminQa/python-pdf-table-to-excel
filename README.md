@@ -6,6 +6,6 @@ The code works by entering annotations of all the fields that you want to extrac
 
 Attention, the fields must always be in the same place in the document - check visually!
 
-The first file is auxiliary - it serves to visually identify all fields that we want to extract (so that the coordinates are known).
-In the second file, a new PDF is generated along with the entered annotations, the data is logged into the console for control.
+The first and second files are auxiliary - it serves to visually identify all fields that we want to extract (so that the coordinates are known).
+In the second file, the data is logged into the console for control.
 The third file goes through all annotated PDFs and extracts data into an Excel spreadsheet.

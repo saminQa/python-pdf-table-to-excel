@@ -12,7 +12,7 @@ output_folder_path = 'C:/path/to/your/output/folder/'
 if not os.path.exists(output_folder_path):
     os.makedirs(output_folder_path)
 
-# Define the rectangles coordinates (x0, y0, x1, y1)
+# Define the rectangles coordinates (x0, y0, x1, y1) - visually align rectangles as you want, these are just examples
 rectangles = [
     fitz.Rect(1033, 695, 1103, 714),
     fitz.Rect(820, 754, 968, 773),
@@ -57,9 +57,9 @@ for filename in os.listdir(folder_path):
                     data[title] = []
                 data[title].append(values)
 
-        # Save the annotated file to the output folder
-        output_file_path = os.path.join(output_folder_path, filename.replace('.pdf', '_with_annotations.pdf'))
-        doc.save(output_file_path)
+        # Save the annotated file to the output folder - if you want to have visual reference - uncomment this two lines
+        # output_file_path = os.path.join(output_folder_path, filename.replace('.pdf', '_with_annotations.pdf'))
+        # doc.save(output_file_path)
 
 # Create a DataFrame from the extracted data
 df = pd.DataFrame.from_dict(data, orient='index').transpose()
